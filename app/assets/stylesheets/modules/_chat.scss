@@ -12,8 +12,8 @@
           margin-top: 35px;
         }
         &__members {
-          color: #999;
-          display: flex;
+          @include flexbox;
+          color: $light_gray;
           font-size: 12px;
           margin-top: 15px;
           .member {
@@ -26,10 +26,14 @@
         border: 1px solid $light_blue;
         color: $light_blue;
         float: right;
-        height: 39px;
+        height: 40px;
         line-height: 40px;
         margin-top: 28px;
         padding: 0 20px;
+        &__button {
+          color: $light_blue;
+          text-decoration: none;
+        }
       }
     }
   
@@ -42,12 +46,12 @@
         .upper-message {
           display: flex;
           &__user-name {
-            color: #434a54;
+            color: $black;
             font-size: 16px;
             font-weight: bold;
           }
           &__date {
-            color: #999;
+            color: $light_gray;
             font-size: 12px;
             padding-left: 10px;
           }
@@ -55,7 +59,7 @@
         .lower-message {
           margin-top: 10px;
           &__content {
-            color: #434a54;
+            color: $black;
             font-size: 14px;
             margin-bottom: 40px;
           }
@@ -80,10 +84,8 @@
         height: 50px;
         padding-right: 10px;
         &__image {
-          color: black;
-          font-size: 30px;
-          line-height: 50px;
           font-size: 20px;
+          line-height: 50px;
         }
         .hidden {
           display: none;
