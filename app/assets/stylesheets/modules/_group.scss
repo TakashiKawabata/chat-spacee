@@ -6,27 +6,15 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
-  &__action-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    color: #fff;
-    background-color: #38aef0;
-    border: 0;
-  }
-  &__label {
-    display: block;
-    line-height: 50px;
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
   }
-  &__input {
-    float: left;
-    width: 100%;
-    line-height: 30px;
-    padding: 10px 15px;
-    box-sizing: border-box;
-  }
-  &__errors {
+
+  .chat-group-form__errors {
     margin: 30px 0;
     padding: 20px 40px;
     border: 1px solid #ddd;
@@ -52,13 +40,6 @@
     }
   }
 
-  h1 {
-    letter-spacing: 2px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-  }
-
   .chat-group-form__field {
     margin-top: 30px;
     &:after {
@@ -66,16 +47,33 @@
       clear: both;
       display: block;
     }
-    &--left {
+
+    .chat-group-form__field--left {
       float: left;
       width: 30%;
       padding-right: 20px;
       padding-left: 20px;
       box-sizing: border-box;
     }
-    &--right {
+
+    .chat-group-form__field--right {
       float: right;
       width: 70%;
+    }
+
+    .chat-group-form__label {
+      display: block;
+      line-height: 50px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .chat-group-form__input {
+      float: left;
+      width: 100%;
+      line-height: 30px;
+      padding: 10px 15px;
+      box-sizing: border-box;
     }
   }
 
@@ -89,19 +87,31 @@
       clear: both;
       display: block;
     }
-    &__name {
+
+    .chat-group-user__name {
       float: left;
     }
-    &__btn {
+
+    .chat-group-user__btn {
       float: right;
       display: inline-block;
       cursor: pointer;
-    &__btn--add {
+
+      &.chat-group-user__btn--add {
         color: #38aef0;
       }
-    &__btn--remove {
+
+      &.chat-group-user__btn--remove {
         color: #f05050;
       }
     }
+  }
+
+  .chat-group-form__action-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #38aef0;
+    border: 0;
   }
 }
