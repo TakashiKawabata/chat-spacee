@@ -3,24 +3,24 @@ $(function(){
     message.text ? temptext = message.content : temptext = ""
     message.image ? tempimage = message.image : tempimage = ""
     var html =
-      `<div class="message" data-message-id=${message.id}>
+    `<div class="message" data-message-id=${message.id}>
         <div class="upper-message">
-           <div class="upper-message__user-name">
+          <div class="upper-message__user-name">
             ${message.user_name}
-           </div>
-            <div class="upper-message__date">
-             ${message.date}
-            </div>
-           </div>
-           <div class="lower-message">
-            <p class="lower-message__content">
-              ${temptext}
-            </p>
-         </div>
-          <img src=${tempimage}>
-       </div>`
+          </div>
+          <div class="upper-message__date">
+            ${message.date}
+          </div>
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${temptext}
+          </p>
+        </div>
+        <img src=${tempimage}>
+      </div>`
       return html;
-      } 
+  }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -35,6 +35,7 @@ $(function(){
       contentType: false
    })
    .done(function(data){
+     console.log(data)
      var html = buildHTML(data);
      $('.messages').append(html);
      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
