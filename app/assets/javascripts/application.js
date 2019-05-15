@@ -14,5 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-// require 'active_support'
-// require 'active_support/core_ext'
