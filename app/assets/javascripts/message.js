@@ -48,8 +48,9 @@ $(document).on('turbolinks:load', function(){
   var reloadMessages = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
     last_message_id = $(".message:last").data("message-id");
+    var group_id = $(".left-header__title").data('group-id');
     $.ajax({
-      url: '/groups/:group_id/api/messages',
+      url: `/groups/${group_id}/api/messages`,
       type: 'get',
       dataType: 'json',
       data: {id: last_message_id}
@@ -63,7 +64,7 @@ $(document).on('turbolinks:load', function(){
     });
     })
     .fail(function() {
-      alert('自動更新に失敗しました');
+      console.log('自動更新に失敗しました');
     });
   }else{
   clearInterval(reloadMessages);
