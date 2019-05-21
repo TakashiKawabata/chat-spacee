@@ -55,7 +55,6 @@ $(document).on('turbolinks:load', function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages)
       var insertHTML = '';
       messages.forEach(function(message) {
       insertHTML = buildHTML(message)
