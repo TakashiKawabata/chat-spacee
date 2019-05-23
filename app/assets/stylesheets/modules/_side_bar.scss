@@ -32,9 +32,9 @@
       // height: calc(100vh - 100px);
       min-height: 100%;
       padding: 20px 20px 0;
+      overflow: scroll;
       .group {
         box-sizing: border-box;
-        height: calc(100vh - 100px);
         margin-bottom: 40px;
         &__name {
           color: $white;
