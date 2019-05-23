@@ -31,13 +31,15 @@
       background-color: $side_blue_light;
       // height: calc(100vh - 100px);
       min-height: 100%;
-      padding: 0 20px;
+      padding: 20px 20px 0;
       .group {
         box-sizing: border-box;
-        padding: 20px 0 40px;
+        height: calc(100vh - 100px);
+        margin-bottom: 40px;
         &__name {
           color: $white;
           font-size: $side_group_name;
+          margin-bottom: 5px;
         }
         &__message {
           color: $white;
